@@ -1,4 +1,3 @@
-script src="/js/ckeditor/ckeditor.js"
 h1 Редактирование страницы ID:#{@page.id}
 
 .container
@@ -20,9 +19,6 @@ h1 Редактирование страницы ID:#{@page.id}
     .form-group
       label.control-label for="page_content" Содержимое страницы
       textarea.form-control rows="5" placeholder=("page_content") id="page_content" name="page_content" ==@page.page_content
-
-    javascript:
-      CKEDITOR.replace( 'page_content' );
     
     .form-group
       label.control-label for="parent_id" Родительская страница
@@ -39,3 +35,7 @@ h1 Редактирование страницы ID:#{@page.id}
 
     .form-group
       input.button.btn.btn-primary type="submit" value=("СОХРАНИТЬ")
+      
+script src="/js/ckeditor/ckeditor.js"
+javascript:
+  CKEDITOR.replace( 'page_content' );
